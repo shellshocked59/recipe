@@ -27,3 +27,7 @@ Uploaded on:
 Uploaded by:
 <?php echo $this->data['User']['alias']; ?>
 </p>
+
+<?php echo $this->element('likes', array('video_id' => $this->data['Recipe']['id'])); ?>
+
+
