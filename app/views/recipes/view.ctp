@@ -6,7 +6,7 @@
 <?php echo $this->data['Recipe']['description']; ?>
 </p>
 <p>
-Estimated Time:
+Estimated Preparation Time:
 <?php echo $this->data['Recipe']['time']; ?>
 </p>
 <br />
@@ -27,6 +27,11 @@ Uploaded on:
 Uploaded by:
 <?php echo $this->data['User']['alias']; ?>
 </p>
+
+
+<?php echo $this->Html->image("/files/recipes/" . $recipe['Recipe']['id'] . '.png', array( 'style' => 'width:205px; height:100',   "alt" => "Nav_Mockup",    'url' => array('controller' => 'recipes', 'action' => 'view', $recipe['Recipe']['id']))); ?>
+
+
 
 <?php echo $this->element('likes', array('video_id' => $this->data['Recipe']['id'])); ?>
 

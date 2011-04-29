@@ -40,12 +40,5 @@ class UsersController extends AppController {
 	  }
 	}
   }
-  function view($Userid) {
-	  /**
-		 ERIC - view is used to view a user Profile. unfortunately i suck at coding.
-		 */
-	  $cur_user = $this->User->find('first', array('conditions' => array('User.id' => $Userid)));
-  $this->set('comments', $cur_video['Comment']);
-  $this->set('videos', $cur_video['Video']);
-  }
+  
 }
